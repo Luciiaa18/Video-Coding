@@ -126,5 +126,17 @@ python test_main.py
 Resultados obtenidos:
 ![image](https://github.com/user-attachments/assets/ab3cb570-0185-44b1-a4f3-89d25bb1dbe2)
 
+## Ejercicio 4: Añadir Endpoints
+Hemos añadido tres nuevos endpoints a la API:
+
+/convert_rgb_to_yuv: Convierte una imagen de formato RGB a YUV.
+/convert_yuv_to_rgb: Convierte una imagen de formato YUV a RGB.
+/compress_to_bw: Comprime y convierte una imagen a escala de grises (blanco y negro).
+Estos tres endpoints están disponibles y accesibles desde la documentación interactiva en http://127.0.0.1:8000/docs.
+![unnamed](https://github.com/user-attachments/assets/791cdfb1-28f3-4922-b100-9ee3600898db)
+![unnamed (1)](https://github.com/user-attachments/assets/9357d6f4-ee5f-4261-9768-d7bf55b2429c)
+![Captura](https://github.com/user-attachments/assets/e96094be-daa0-4de1-b564-34d7bbce2325)
+
+
 ## Contribuciones
 Si deseas contribuir al proyecto, puedes realizar mejoras en las funciones existentes o agregar nuevas técnicas de compresión y codificación. Si tienes alguna sugerencia o duda, no dudes en abrir un "issue" en este repositorio.
