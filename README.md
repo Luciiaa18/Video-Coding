@@ -110,6 +110,7 @@ Ejecutamos el contenedor para verificar la instalación de FFmpeg:
 ```
 docker run --rm ffmpeg-container
 ```
+![image](https://github.com/user-attachments/assets/e6a663b1-5d32-4555-a6bb-f180e8130250)
 
 ## Ejercicio 3: Actualización y Pruebas
 Añadimos las clases del Seminario 1 al archivo main.py y los unit tests al archivo test_main.py.
