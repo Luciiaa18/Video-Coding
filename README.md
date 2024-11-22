@@ -1,4 +1,4 @@
-# Seminario 1
+# Seminario 1:  JPEG, JPEG2000, FFMPEG
 Este proyecto fue realizado en Google Colab y se centra en la manipulación y compresión de imágenes y videos utilizando diversas técnicas de codificación. A continuación se describe brevemente el contenido y las funcionalidades implementadas.
 
 ## Descripción del Proyecto
@@ -39,4 +39,5 @@ Si deseas contribuir al proyecto, puedes realizar mejoras en las funciones exist
 
 
 
-# Lab 1 - Ray Tracing
+# Laboratorio 1: API and Dockerization
+
