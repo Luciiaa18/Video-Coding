@@ -45,7 +45,7 @@ Este proyecto cubre la creación de una API básica utilizando FastAPI y su dock
 ## Ejercicio 1: Desarrollo de una API con FastAPI y Docker
 
 ### Paso 1: Creación del Proyecto
-1. Creamos un nuevo proyecto en PyCharm llamado `practice1` y selecciona un entorno virtual (Python 3.11).
+1. Creamos un nuevo proyecto en PyCharm llamado `practice1` y seleccionamos un entorno virtual (Python 3.11).
 2. Instalamos las dependencias necesarias:
    ```bash
    pip install fastapi uvicorn
@@ -119,7 +119,7 @@ Para ejecutar la API, usamos el siguiente comando:
 ```
 uvicorn main:app --reload
 ```
-Para ejecutar los tests, usa:
+Para ejecutar los tests, usamos:
 ```
 python test_main.py
 ```
@@ -132,6 +132,7 @@ Hemos añadido tres nuevos endpoints a la API:
 1. **/convert_rgb_to_yuv**: Convierte una imagen de formato RGB a YUV.
 2. **/convert_yuv_to_rgb**: Convierte una imagen de formato YUV a RGB.
 3. **/compress_to_bw**: Comprime y convierte una imagen a escala de grises (blanco y negro).
+   
 Estos tres endpoints están disponibles y accesibles desde la documentación interactiva en http://127.0.0.1:8000/docs.
 ![unnamed](https://github.com/user-attachments/assets/791cdfb1-28f3-4922-b100-9ee3600898db)
 ![unnamed (1)](https://github.com/user-attachments/assets/9357d6f4-ee5f-4261-9768-d7bf55b2429c)
