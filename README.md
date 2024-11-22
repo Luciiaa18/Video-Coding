@@ -40,4 +40,89 @@ Si deseas contribuir al proyecto, puedes realizar mejoras en las funciones exist
 
 
 # Laboratorio 1: API and Dockerization
+Este proyecto cubre la creación de una API básica utilizando FastAPI y su dockerización para permitir su ejecución en cualquier entorno.
 
+## Ejercicio 1: Desarrollo de una API con FastAPI y Docker
+
+### Paso 1: Creación del Proyecto
+1. Creamos un nuevo proyecto en PyCharm llamado `practice1` y selecciona un entorno virtual (Python 3.11).
+2. Instalamos las dependencias necesarias:
+   ```bash
+   pip install fastapi uvicorn
+   
+### Paso 2: Creación de la API con FastAPI
+En el archivo `main.py`, creamos la API con una ruta básica:
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello, World!"}
+```
+### Paso 3: Ejecución Local de la API
+Ejecutamos la API localmente con Uvicorn:
+
+```bash
+uvicorn main:app --reload
+```
+Accedemos a la API en http://127.0.0.1:8000 y la documentación interactiva en http://127.0.0.1:8000/docs.
+
+### Paso 4: Dockerización de la Aplicación
+Creamos el archivo Dockerfile:
+```
+FROM python:3.11-slim
+WORKDIR /app
+COPY . /app
+RUN pip install --no-cache-dir -r requirements.txt
+EXPOSE 8000
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+```
+
+Creamos el archivo requirements.txt:
+```
+fastapi
+uvicorn
+```
+Construimos y ejecutamos el contenedor Docker:
+```
+docker build -t practice1 .
+docker run -d -p 8000:8000 practice1
+```
+### Paso 5: Verificación en Docker
+Accedemos a la API dockerizada en http://127.0.0.1:8000 para verificar su funcionamiento.
+
+## Ejercicio 2: Dockerizar FFmpeg
+Creamos un nuevo proyecto llamado ffmpeg-docker y en el archivo Dockerfile agregamos lo siguiente:
+```
+FROM ubuntu:20.04
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y ffmpeg
+CMD ["ffmpeg", "-version"]
+```
+Construimos la imagen Docker:
+```
+docker build -t ffmpeg-container .
+```
+Ejecutamos el contenedor para verificar la instalación de FFmpeg:
+```
+docker run --rm ffmpeg-container
+```
+
+## Ejercicio 3: Actualización y Pruebas
+Añadimos las clases del Seminario 1 al archivo main.py y los unit tests al archivo test_main.py.
+Para ejecutar la API, usamos el siguiente comando:
+```
+uvicorn main:app --reload
+```
+Para ejecutar los tests, usa:
+```
+python test_main.py
+```
+Resultados obtenidos:
+![image](https://github.com/user-attachments/assets/ab3cb570-0185-44b1-a4f3-89d25bb1dbe2)
+
+## Contribuciones
+Si deseas contribuir al proyecto, puedes realizar mejoras en las funciones existentes o agregar nuevas técnicas de compresión y codificación. Si tienes alguna sugerencia o duda, no dudes en abrir un "issue" en este repositorio.
