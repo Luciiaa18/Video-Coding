@@ -110,6 +110,7 @@ Ejecutamos el contenedor para verificar la instalación de FFmpeg:
 ```
 docker run --rm ffmpeg-container
 ```
+En Docker Desktop, ya tenemos las dos imágenes que hemos creado:
 ![image](https://github.com/user-attachments/assets/e6a663b1-5d32-4555-a6bb-f180e8130250)
 
 ## Ejercicio 3: Actualización y Pruebas
